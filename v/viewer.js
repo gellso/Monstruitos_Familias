@@ -12,7 +12,7 @@
     es: {
       loading: 'Abriendo el monstruo…', hello: '¡Hola!', welcome: 'Escanea con la cámara del móvil el código QR que te ha dado el tutor o la tutora y verás aquí el monstruo de tu hijo o hija.',
       saved: 'Guardados en este móvil', badKey: 'Este enlace no está completo. Vuelve a escanear el código QR o pide uno nuevo al tutor.',
-      notFound: 'Este código ya no funciona. Puede que el tutor lo haya renovado: pídele uno nuevo.', netError: 'No se ha podido conectar. Revisa la conexión a internet e inténtalo de nuevo.', oldPhone: 'Este navegador es demasiado antiguo para abrir la ficha cifrada. Prueba con otro navegador o actualiza el móvil.',
+      notFound: 'Todavía no hay ninguna ficha para este código. Si te lo acaban de dar, vuelve a probar dentro de unos minutos. Si antes funcionaba, puede que el tutor lo haya renovado: pídele uno nuevo.', netError: 'No se ha podido conectar. Revisa la conexión a internet e inténtalo de nuevo.', oldPhone: 'Este navegador es demasiado antiguo para abrir la ficha cifrada. Prueba con otro navegador o actualiza el móvil.',
       retry: 'Reintentar', monsterOf: 'El monstruo de {name}', yourMonster: 'Su monstruo', stars: 'estrellas', coins: 'monedas',
       toNext: 'Le faltan {n} ⭐ para llegar a {phase}', maxPhase: '¡Ha llegado a Mítico, la fase más alta!', path: 'Su camino', week: 'Esta semana', weekStars: '+{n} ⭐', bonusDays: '{n} días sin incidencias', weekNone: 'Todavía no hay estrellas esta semana',
       shop: 'Tienda de la clase', shopNote: 'Lo compra en clase, el «Día de tienda», con sus monedas. Gastar nunca le quita estrellas.', filterCan: 'Puede comprar', filterAll: 'Todo', cos: 'Para su monstruo', priv: 'Privilegios',
@@ -29,7 +29,7 @@
     va: {
       loading: 'Obrint el monstre…', hello: 'Hola!', welcome: 'Escaneja amb la càmera del mòbil el codi QR que t’ha donat el tutor o la tutora i veuràs ací el monstre del teu fill o filla.',
       saved: 'Guardats en aquest mòbil', badKey: 'Aquest enllaç no està complet. Torna a escanejar el codi QR o demana’n un de nou al tutor.',
-      notFound: 'Aquest codi ja no funciona. Pot ser que el tutor l’haja renovat: demana-li’n un de nou.', netError: 'No s’ha pogut connectar. Revisa la connexió a internet i torna-ho a provar.', oldPhone: 'Aquest navegador és massa antic per a obrir la fitxa xifrada. Prova amb un altre navegador o actualitza el mòbil.',
+      notFound: 'Encara no hi ha cap fitxa per a aquest codi. Si te l’acaben de donar, torna a provar d’ací a uns minuts. Si abans funcionava, pot ser que el tutor l’haja renovat: demana-li’n un de nou.', netError: 'No s’ha pogut connectar. Revisa la connexió a internet i torna-ho a provar.', oldPhone: 'Aquest navegador és massa antic per a obrir la fitxa xifrada. Prova amb un altre navegador o actualitza el mòbil.',
       retry: 'Tornar a provar', monsterOf: 'El monstre de {name}', yourMonster: 'El seu monstre', stars: 'estreles', coins: 'monedes',
       toNext: 'Li falten {n} ⭐ per a arribar a {phase}', maxPhase: 'Ha arribat a Mític, la fase més alta!', path: 'El seu camí', week: 'Aquesta setmana', weekStars: '+{n} ⭐', bonusDays: '{n} dies sense incidències', weekNone: 'Encara no hi ha estreles aquesta setmana',
       shop: 'Botiga de la classe', shopNote: 'Ho compra a classe, el «Dia de botiga», amb les seues monedes. Gastar mai li lleva estreles.', filterCan: 'Pot comprar', filterAll: 'Tot', cos: 'Per al seu monstre', priv: 'Privilegis',
