@@ -146,3 +146,54 @@ m-ic, .ic-wrap { display: inline-flex; align-items: center; vertical-align: -0.1
 .fly-star .ic { filter: drop-shadow(0 0 6px rgba(255, 210, 63, .9)); }
 @keyframes popIn2 { from { transform: scale(.6); opacity: 0; } }
 .pp-track .track { margin-top: 0; gap: 6px; }
+/* Con una ventana abierta, los monstruos de la clase de detrás se quedan quietos */
+body.ov-open #grid .monster, body.ov-open #grid .monster * { animation-play-state: paused !important; }
+body.anim-lite #grid .monster * { animation: none !important; }
+body.anim-lite #grid .card.life .mwrap svg.monster { animation: lifeHop .9s cubic-bezier(.3, 1.5, .5, 1); transform-origin: 50% 100%; }
+body.anim-lite #grid .card.blinking .monster .eyes { animation: blinkOnce .5s ease-in-out !important; }
+@keyframes lifeHop { 0%, 100% { transform: translateY(0) scale(1); } 35% { transform: translateY(-7%) scale(.97, 1.04); } 65% { transform: translateY(0) scale(1.04, .96); } }
+@keyframes blinkOnce { 0%, 100% { transform: scaleY(1); } 40%, 60% { transform: scaleY(.08); } }
+body.anim-lite .give-heads .monster *:not(.m-anim) { animation: none !important; }
+.monster .cos-floaty > g { transform-box: fill-box; transform-origin: center; animation: floatyBit 2.6s ease-in-out infinite; }
+.monster .cos-floaty > g:nth-child(2n) { animation-delay: -.9s; }
+.monster .cos-floaty > g:nth-child(3n) { animation-delay: -1.7s; }
+@keyframes floatyBit { 0%, 100% { transform: translateY(0) rotate(0); opacity: .85; } 50% { transform: translateY(-7px) rotate(8deg); opacity: 1; } }
+.monster .cos-prop { transform-box: fill-box; transform-origin: center; animation: propSpin .5s linear infinite; }
+@keyframes propSpin { 0% { transform: scaleX(1); } 50% { transform: scaleX(-1); } 100% { transform: scaleX(1); } }
+.monster .cos-wing .wl { transform-box: fill-box; transform-origin: 100% 60%; animation: wingFlap 2.2s ease-in-out infinite; }
+@keyframes wingFlap { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(.84); } }
+.monster .cos-swim { transform-box: fill-box; transform-origin: center; animation: swim 2.4s ease-in-out infinite; }
+@keyframes swim { 0%, 100% { transform: translateX(-2px); } 50% { transform: translateX(3px) scaleX(-1); } }
+.card.cos-fondo_nieve, .mini-card.cos-fondo_nieve { --cbg: radial-gradient(circle at 30% 30%, #fff 0 2px, transparent 3px) 0 0/30px 30px, radial-gradient(circle at 70% 70%, #fff 0 1.5px, transparent 2.5px) 0 0/22px 22px, linear-gradient(#e6f3ff, #c6e2ff); }
+.card.cos-fondo_desierto, .mini-card.cos-fondo_desierto { --cbg: radial-gradient(circle at 82% 16%, #fff1a8 0 14px, transparent 15px), linear-gradient(#ffe7b0 0 62%, #f2c46b 62%); }
+.card.cos-fondo_noche, .mini-card.cos-fondo_noche { --cbg: radial-gradient(circle at 80% 16%, #fff6c2 0 12px, transparent 13px), radial-gradient(circle at 20% 30%, #fff 0 1px, transparent 2px) 0 0/40px 40px, radial-gradient(circle at 60% 70%, #fff 0 1px, transparent 2px) 0 0/56px 56px, linear-gradient(#1b2350, #33307a); color: #fff; }
+.card.cos-fondo_arcoiris, .mini-card.cos-fondo_arcoiris { --cbg: linear-gradient(#ffd6e7, #fff1c1 25%, #d4f7e3 50%, #d6ecff 75%, #e6dcff); }
+.card.cos-fondo_playa, .mini-card.cos-fondo_playa { --cbg: radial-gradient(circle at 18% 14%, #fff59a 0 11px, transparent 12px), linear-gradient(#bfe9ff 0 52%, #6cc6f2 52% 62%, #f6dc9b 62%); }
+.card.cos-fondo_otono, .mini-card.cos-fondo_otono { --cbg: radial-gradient(circle at 25% 25%, #ff9d4d 0 3px, transparent 4px) 0 0/36px 36px, radial-gradient(circle at 75% 60%, #e8653c 0 3px, transparent 4px) 0 0/44px 44px, linear-gradient(#fff0d6, #ffcf96); }
+.card.cos-fondo_caramelo, .mini-card.cos-fondo_caramelo { --cbg: repeating-linear-gradient(45deg, #ffe0ec 0 14px, #fffafc 14px 28px); }
+.card.cos-fondo_bosque, .mini-card.cos-fondo_bosque { --cbg: radial-gradient(circle at 12% 100%, #3f9a4a 0 34px, transparent 35px), radial-gradient(circle at 50% 104%, #4fae55 0 30px, transparent 31px), radial-gradient(circle at 92% 100%, #3a8d43 0 38px, transparent 39px), linear-gradient(#e6f8dc, #bfe6a8); }
+.card.cos-fondo_cielo, .mini-card.cos-fondo_cielo { --cbg: radial-gradient(ellipse at 25% 22%, #fff 0 14px, transparent 15px), radial-gradient(ellipse at 72% 40%, #fff 0 12px, transparent 13px), linear-gradient(#d3f0ff, #9ed6ff); }
+.card.cos-fondo_volcan, .mini-card.cos-fondo_volcan { --cbg: radial-gradient(circle at 50% 110%, #ff8a3c 0 30px, transparent 60px), linear-gradient(#3a1d2e, #7a2a2a 70%, #c2402a); color: #fff; }
+.card[class*=" cos-marco_"]::before, .mini-card[class*=" cos-marco_"]::before {
+  content: ''; position: absolute; inset: -5px; border-radius: calc(var(--radius) + 2px); padding: 6px; pointer-events: none; z-index: 1;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.mini-card[class*=" cos-marco_"]::before { inset: -3px; border-radius: 22px; padding: 5px; }
+.card.cos-marco_plata::before, .mini-card.cos-marco_plata::before { background: linear-gradient(135deg, #ffffff, #b9c1cc, #f4f6fa, #8f9aa8); box-shadow: 0 0 10px rgba(160, 170, 185, .6); }
+.card.cos-marco_madera::before, .mini-card.cos-marco_madera::before { background: repeating-linear-gradient(90deg, #c08a4f 0 7px, #a8733c 7px 13px, #b97f45 13px 18px); }
+.card.cos-marco_caramelo::before, .mini-card.cos-marco_caramelo::before { background: repeating-linear-gradient(45deg, #ff4f6e 0 9px, #fff 9px 18px); }
+.card.cos-marco_neon::before, .mini-card.cos-marco_neon::before { background: linear-gradient(90deg, #3ff0ff, #7b5cff, #ff4fd8); box-shadow: 0 0 14px rgba(63, 240, 255, .7), 0 0 26px rgba(123, 92, 255, .45); }
+.card.cos-marco_rosa::before, .mini-card.cos-marco_rosa::before { background: linear-gradient(135deg, #ffd6e7, #e6dcff, #d4f7e3, #fff1c1); }
+.card.cos-cartel_plata .name, .mini-card.cos-cartel_plata .name { background: linear-gradient(90deg, #f4f6fa, #b9c1cc); color: #3b3f4a; padding: 0 12px; border-radius: 99px; box-shadow: 0 2px 0 #8f9aa8; }
+.card.cos-cartel_arcoiris .name, .mini-card.cos-cartel_arcoiris .name { background: linear-gradient(90deg, #ff6fae, #ffc83d, #2fcf95, #3fa9ff, #7b5cff); color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .35); padding: 0 12px; border-radius: 99px; }
+.card.cos-cartel_neon .name, .mini-card.cos-cartel_neon .name { background: #1d1630; color: #7ff6ff; text-shadow: 0 0 6px #3ff0ff; padding: 0 12px; border-radius: 99px; box-shadow: 0 0 10px rgba(63, 240, 255, .5); }
+.card.cos-cartel_rosa .name, .mini-card.cos-cartel_rosa .name { background: #ffd6e7; color: #b0306a; padding: 0 12px; border-radius: 99px; box-shadow: 0 2px 0 #f39cc0; }
+.card.cos-cartel_madera .name, .mini-card.cos-cartel_madera .name { background: repeating-linear-gradient(90deg, #c08a4f 0 9px, #b27c43 9px 16px); color: #fff8ec; padding: 0 12px; border-radius: 8px; box-shadow: 0 2px 0 #8a5a2b; }
+.mini-card.dance-baile_meneo .mwrap svg { animation: danceWiggle 1.2s ease-in-out infinite; }
+.mini-card.dance-baile_volteo .mwrap svg { animation: danceFlip 1.6s ease-in-out infinite; }
+.mini-card.dance-baile_rebote .mwrap svg { animation: danceBounce 1.3s ease-out infinite; }
+.mini-card.dance-baile_temblor .mwrap svg { animation: shake .3s linear infinite; }
+.mini-card.dance-baile_estrella .mwrap svg { animation: danceStar 1.8s ease-in-out infinite; }
+@keyframes danceWiggle { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-12deg); } 40% { transform: rotate(12deg); } 60% { transform: rotate(-8deg); } 80% { transform: rotate(8deg); } }
+@keyframes danceFlip { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(-1) translateY(-10%); } }
+@keyframes danceBounce { 0%, 100% { transform: translateY(0); } 20% { transform: translateY(-18%); } 40% { transform: translateY(0) scale(1.06, .94); } 60% { transform: translateY(-9%); } 80% { transform: translateY(0); } }
+@keyframes danceStar { 0% { transform: scale(1) rotate(0); filter: none; } 50% { transform: scale(1.25) rotate(-15deg); filter: drop-shadow(0 0 10px #ffd23f); } 100% { transform: scale(1) rotate(0); filter: none; } }
