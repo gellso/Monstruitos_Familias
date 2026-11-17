@@ -144,3 +144,8 @@ button:active, .saved-kid:active { transform: scale(.95); }
 details summary { transition: color .2s; } details[open] ul { animation: vUp .3s ease both; }
 @media (prefers-reduced-motion: reduce) { .kid.enter > *, .news, .news li, .confetti, .stat.coin b.bump { animation: none !important; } }
 .stat b .cnt { font-size: inherit; color: inherit; font-weight: inherit; }
+
+.item { cursor: pointer; }
+.item.can { border-color: #bfeed8; }
+.buyq .price { color: #b97f00; font-weight: 900; margin: 0; }
+.buyq .why { background: #fff7e6; border-radius: 12px; padding: 10px 12px; margin: 10px 0 14px; color: var(--ink); }

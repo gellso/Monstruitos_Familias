@@ -25,6 +25,7 @@
       remember: 'Guardar en este móvil', remembered: 'Guardado en este móvil', forget: 'Quitar de este móvil', homeHint: 'Consejo: añade esta página a la pantalla de inicio para abrirla como una app.',
       days: ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'], months: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
       phases: { huevo: 'Huevo', cria: 'Cría', joven: 'Joven', adulto: 'Adulto', heroico: 'Heroico', legendario: 'Legendario', mitico: 'Mítico' },
+      whyNoHome: 'Esto lo compra en clase, el «Día de tienda». La compra desde casa no está activada.', whyNo: 'Ahora no se puede comprar.',
       buy: 'Comprar', buyQ: '¿Comprar «{item}» por {n} 🪙?', buyNote: 'Se descuenta ahora mismo de sus monedas y ya es suyo. Lo verá en clase.', bought: '¡Comprado!', boughtCos: 'Su monstruo ya lo lleva puesto.', boughtPriv: 'Lo podrá canjear en clase.', mine: 'Ya es suyo', homeNote: '🏠 Comprado desde casa: se anotará en clase en cuanto se abra Monstruitos.', spentHome: '{n} gastadas desde casa', buyYes: 'Sí, comprar', cancel: 'Cancelar', sending: 'Enviando…', sent: '¡Pedido enviado!', sendErr: 'No se ha podido enviar. Revisa la conexión e inténtalo otra vez.', pendingTitle: 'Pedidos en camino', pendingChip: 'En camino', reserved: '{n} reservadas en pedidos', shopNoteHome: 'Puedes comprar desde aquí con sus monedas: el pedido llega a clase y lo verá allí. Gastar nunca le quita estrellas.', available: 'disponibles',
       history: 'Historial', histMore: 'Ver más', histNone: 'Todavía no hay movimientos.', h_bonus: 'Día sin incidencias', h_adjust: 'Ajuste del tutor', h_coins: 'Ajuste de monedas del tutor', h_buy: 'Compra', h_home: 'desde casa', h_mystery: 'Caja sorpresa: {item}', today: 'Hoy', yesterday: 'Ayer',
       newsTitle: 'Novedades desde tu última visita', newsOk: 'Entendido', n_stars: 'Ha ganado {n} ⭐', n_neg: '{n} «a mejorar»', n_up: '¡Ha evolucionado a {phase}!', n_down: 'Ha vuelto a la fase {phase}', n_bought: 'Ha comprado {item}', n_boughtHome: 'Compra hecha desde casa: {item}', n_redeemed: 'Ha disfrutado su privilegio: {item}', n_coins: 'El tutor ha cambiado sus monedas: {d}', n_orderOk: 'Tu compra «{item}» ya está anotada en clase', n_orderNo: 'Al final no se pudo comprar «{item}» ({why}): sus monedas siguen ahí',
@@ -46,6 +47,7 @@
       remember: 'Guardar en aquest mòbil', remembered: 'Guardat en aquest mòbil', forget: 'Llevar d’aquest mòbil', homeHint: 'Consell: afig aquesta pàgina a la pantalla d’inici per a obrir-la com una app.',
       days: ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte'], months: ['gener', 'febrer', 'març', 'abril', 'maig', 'juny', 'juliol', 'agost', 'setembre', 'octubre', 'novembre', 'desembre'],
       phases: { huevo: 'Ou', cria: 'Cria', joven: 'Jove', adulto: 'Adult', heroico: 'Heroic', legendario: 'Llegendari', mitico: 'Mític' },
+      whyNoHome: 'Això ho compra a classe, el «Dia de botiga». La compra des de casa no està activada.', whyNo: 'Ara no es pot comprar.',
       buy: 'Comprar', buyQ: 'Comprar «{item}» per {n} 🪙?', buyNote: 'Es descompta ara mateix de les seues monedes i ja és seu. Ho veurà a classe.', bought: 'Comprat!', boughtCos: 'El seu monstre ja el porta posat.', boughtPriv: 'El podrà bescanviar a classe.', mine: 'Ja és seu', homeNote: '🏠 Comprat des de casa: s’anotarà a classe tan prompte com s’òbriga Monstrets.', spentHome: '{n} gastades des de casa', buyYes: 'Sí, comprar', cancel: 'Cancel·lar', sending: 'Enviant…', sent: 'Comanda enviada!', sendErr: 'No s’ha pogut enviar. Revisa la connexió i torna-ho a provar.', pendingTitle: 'Comandes en camí', pendingChip: 'En camí', reserved: '{n} reservades en comandes', shopNoteHome: 'Pots comprar des d’ací amb les seues monedes: la comanda arriba a classe i ho veurà allí. Gastar mai li lleva estreles.', available: 'disponibles',
       history: 'Historial', histMore: 'Veure’n més', histNone: 'Encara no hi ha moviments.', h_bonus: 'Dia sense incidències', h_adjust: 'Ajust del tutor', h_coins: 'Ajust de monedes del tutor', h_buy: 'Compra', h_home: 'des de casa', h_mystery: 'Caixa sorpresa: {item}', today: 'Hui', yesterday: 'Ahir',
       newsTitle: 'Novetats des de la teua última visita', newsOk: 'D’acord', n_stars: 'Ha guanyat {n} ⭐', n_neg: '{n} «a millorar»', n_up: 'Ha evolucionat a {phase}!', n_down: 'Ha tornat a la fase {phase}', n_bought: 'Ha comprat {item}', n_boughtHome: 'Compra feta des de casa: {item}', n_redeemed: 'Ha gaudit del seu privilegi: {item}', n_coins: 'El tutor ha canviat les seues monedes: {d}', n_orderOk: 'La teua compra «{item}» ja està anotada a classe', n_orderNo: 'Al final no s’ha pogut comprar «{item}» ({why}): les seues monedes continuen ahí',
@@ -196,6 +198,14 @@
     ov.querySelector('#newsOk').onclick = () => { mark(); ov.remove(); };
   }
 
+  function infoSheet(it, why) {
+    const ov = document.createElement('div');
+    ov.className = 'news-ov';
+    ov.innerHTML = `<div class="news buyq"><div class="art">${itemArt(it, true)}</div><h2>${esc(nm(it))}</h2><p class="price">🪙 ${Number(it.price) || 0}</p><p class="why">${esc(why)}</p><button class="btn" data-a="ok">${esc(t('newsOk'))}</button></div>`;
+    document.body.appendChild(ov);
+    ov.onclick = (e) => { if (e.target === ov || e.target.closest('[data-a=ok]')) ov.remove(); };
+  }
+
   // ---------- Comprar desde casa ----------
   function askBuy(key, it) {
     const ov = document.createElement('div');
@@ -298,7 +308,7 @@
     const reserved = pendList.reduce((a, p) => a + (Number(p.price) || 0), 0), avail = Math.max(0, (Number(d.coins) || 0) - reserved);
     const isPend = (it) => pendList.some(p => p.i === it.id);
     const buyBtn = (it) => !d.shopUrl || !it.id ? '' : isPend(it) ? `<span class="chip own">✓ ${esc(it.kind === 'cosmetic' ? t('mine') : t('bought'))}</span>` : it.state === 'ok' && it.price <= avail ? `<button class="buy" data-buy="${esc(it.id)}">🛒 ${esc(t('buy'))}</button>` : '';
-    const shopGrid = (list, g) => { const all = expanded[g] || list.length <= CAP + 1; const shown = all ? list : list.slice(0, CAP); return `<div class="items">${shown.map(it => `<div class="item st-${esc(it.state)}"><div class="art">${itemArt(it)}</div><div class="iname">${esc(nm(it))}</div><div class="price">🪙 ${Number(it.price) || 0}</div>${isPend(it) || (d.shopUrl && it.state === 'ok' && it.price <= avail) ? '' : stateChip(it)}${buyBtn(it)}</div>`).join('')}</div>${all ? '' : `<button class="more" data-more="${g}">${esc(t('seeAll', { n: list.length }))}</button>`}`; };
+    const shopGrid = (list, g) => { const all = expanded[g] || list.length <= CAP + 1; const shown = all ? list : list.slice(0, CAP); return `<div class="items">${shown.map(it => `<div class="item st-${esc(it.state)}${d.shopUrl && it.id && !isPend(it) && it.state === 'ok' && it.price <= avail ? ' can' : ''}" data-item="${esc(it.id || '')}" role="button" tabindex="0"><div class="art">${itemArt(it)}</div><div class="iname">${esc(nm(it))}</div><div class="price">🪙 ${Number(it.price) || 0}</div>${isPend(it) || (d.shopUrl && it.state === 'ok' && it.price <= avail) ? '' : stateChip(it)}${buyBtn(it)}</div>`).join('')}</div>${all ? '' : `<button class="more" data-more="${g}">${esc(t('seeAll', { n: list.length }))}</button>`}`; };
     const homeV = pendAll.filter(p => p.kind === 'privilege').map(p => ({ icon: p.icon, es: p.es, va: p.va, status: 'pending', home: true }));
     const pend = homeV.concat((d.vouchers || []).filter(v => v.status === 'pending')), done = (d.vouchers || []).filter(v => v.status !== 'pending');
     const howExtra = [];
@@ -328,7 +338,18 @@
     bindHeader();
     $app.querySelectorAll('.filters [data-f]').forEach(b => b.onclick = () => { filter = b.dataset.f; expanded = {}; render(key); });
     $app.querySelectorAll('[data-more]').forEach(b => b.onclick = () => { expanded[b.dataset.more] = true; const y = window.scrollY; render(key); window.scrollTo(0, y); });
-    $app.querySelectorAll('[data-buy]').forEach(b => b.onclick = () => { const it = (d.items || []).find(x => x.id === b.dataset.buy); if (it) askBuy(key, it); });
+    $app.querySelectorAll('[data-buy]').forEach(b => b.onclick = (e) => { e.stopPropagation(); const it = (d.items || []).find(x => x.id === b.dataset.buy); if (it) askBuy(key, it); });
+    // Tocar en cualquier parte del artículo: si se puede, se compra; si no, se explica por qué
+    $app.querySelectorAll('[data-item]').forEach(el => el.onclick = () => {
+      const it = (d.items || []).find(x => x.id === el.dataset.item); if (!it) return;
+      if (d.shopUrl && !isPend(it) && it.state === 'ok' && it.price <= avail) return askBuy(key, it);
+      let why;
+      if (isPend(it)) why = it.kind === 'cosmetic' ? t('mine') : t('bought');
+      else if (!d.shopUrl) why = t('whyNoHome');
+      else if (it.state === 'ok' || it.state === 'coins') why = t('st_coins', { n: Math.max(1, it.price - avail) });
+      else why = (stateChip(it).replace(/<[^>]+>/g, '').trim()) || t('whyNo');
+      infoSheet(it, why);
+    });
     // Las monedas bajan contando cuando se compra algo
     const cnt = $app.querySelector('.stat.coin .cnt');
     if (cnt) { const to = Number(cnt.dataset.to) || 0; if (shownCoins !== null && shownCoins !== to && !reduceMotion()) countTo(cnt, shownCoins, to); shownCoins = to; }
