@@ -18,7 +18,7 @@
       shop: 'Tienda de la clase', shopNote: 'Lo compra en clase, el «Día de tienda», con sus monedas. Gastar nunca le quita estrellas.', filterCan: 'Puede comprar', filterAll: 'Todo', cos: 'Para su monstruo', priv: 'Privilegios',
       seeAll: 'Ver todos ({n})', st_ok: '¡Le llega!', st_coins: 'Faltan {n} 🪙', st_phase: 'Desde {phase}', st_owned: 'Ya lo tiene', st_soldout: 'Agotado hoy', st_weekly: 'Ya lo usó esta semana', mystery: 'Caja sorpresa', mysteryNote: 'un adorno al azar',
       saving: 'Está ahorrando para', vouchers: 'Sus vales', vPending: 'Por canjear', vRedeemed: 'Disfrutado', noVouchers: 'Todavía no ha comprado ningún privilegio.', goals: 'Premios de la clase', goalMine: 'ha aportado {n} 🪙', goalDone: '¡Conseguido!',
-      how: '¿Cómo funciona?',
+      how: '¿Cómo funciona?', noticeTitle: 'Mensaje del tutor', n_notice: 'Hay un mensaje nuevo del tutor',
       howText: ['Cada buen comportamiento en clase le da estrellas ⭐.', 'Con las estrellas su monstruo evoluciona: Cría, Joven, Adulto, Heroico, Legendario y Mítico.', 'Cada estrella es también una moneda 🪙 para la tienda de la clase. Gastar monedas nunca le quita estrellas ni fases.'],
       howBonus: 'Si un día no tiene ningún «a mejorar», a las {time} recibe {n} ⭐ extra.', howDraw: 'La forma Mítica es su propio dibujo, convertido en monstruo.',
       updated: 'Actualizado el {date}', privacy: 'Estos datos van cifrados: solo se pueden abrir con este código. No lo compartas fuera de la familia.',
@@ -27,7 +27,8 @@
       phases: { huevo: 'Huevo', cria: 'Cría', joven: 'Joven', adulto: 'Adulto', heroico: 'Heroico', legendario: 'Legendario', mitico: 'Mítico' },
       whyNoHome: 'Esto lo compra en clase, el «Día de tienda». La compra desde casa no está activada.', whyNo: 'Ahora no se puede comprar.',
       buy: 'Comprar', buyQ: '¿Comprar «{item}» por {n} 🪙?', buyNote: 'Se descuenta ahora mismo de sus monedas y ya es suyo. Lo verá en clase.', bought: '¡Comprado!', boughtCos: 'Su monstruo ya lo lleva puesto.', boughtPriv: 'Lo podrá canjear en clase.', mine: 'Ya es suyo', homeNote: '🏠 Comprado desde casa: se anotará en clase en cuanto se abra Monstruitos.', spentHome: '{n} gastadas desde casa', buyYes: 'Sí, comprar', cancel: 'Cancelar', sending: 'Enviando…', sent: '¡Pedido enviado!', sendErr: 'No se ha podido enviar. Revisa la conexión e inténtalo otra vez.', pendingTitle: 'Pedidos en camino', pendingChip: 'En camino', reserved: '{n} reservadas en pedidos', shopNoteHome: 'Puedes comprar desde aquí con sus monedas: el pedido llega a clase y lo verá allí. Gastar nunca le quita estrellas.', available: 'disponibles',
-      history: 'Historial', histMore: 'Ver más', histNone: 'Todavía no hay movimientos.', h_bonus: 'Día sin incidencias', h_adjust: 'Ajuste del tutor', h_coins: 'Ajuste de monedas del tutor', h_buy: 'Compra', h_home: 'desde casa', h_mystery: 'Caja sorpresa: {item}', today: 'Hoy', yesterday: 'Ayer',
+      history: 'Historial', histMore: 'Ver más', histNone: 'Todavía no hay movimientos.', h_bonus: 'Día sin incidencias', h_adjust: 'Ajuste del tutor', h_coins: 'Ajuste de monedas del tutor', h_buy: 'Compra', h_home: 'desde casa', h_mystery: 'Caja sorpresa: {item}', today: 'Hoy', yesterday: 'Ayer', histStars: 'Historial de estrellas', histStarsSub: 'Qué ha hecho en clase y cuántas estrellas suma o resta cada cosa.', histCoins: 'Monedas: compras y ajustes', h_noted: 'anotado', h_notedHint: 'Los «a mejorar» marcados como «anotado» no restan estrellas.', h_day: '{n} ⭐ este día', coinsNone: 'Todavía no ha gastado monedas.',
+      w_title: 'Monstrópolis', w_planet: 'Planeta {n} de {t}', w_now: 'Ahora está aprendiendo', w_help: 'Cómo ayudar en casa', w_done: 'Planetas conquistados: {n}', w_stages: ['Acaba de llegar', 'Despegando', 'En órbita', 'Aterrizando', '¡Conquistado!'], w_what: 'Cada planeta es un hábito. Cuando lo hace solo, sin que se lo recuerden, lo conquista y viaja al siguiente.', w_summit: '¡Ha llegado a la cumbre de Monstrópolis!', n_planet: '¡Ha conquistado el planeta {p}! Ahora viaja al planeta {q}', h_title: 'Esta semana en casa', h_text: 'Un toque por semana nos ayuda mucho. ¿Cómo ha ido?', h_si: 'Sí', h_aveces: 'A veces', h_no: 'Todavía no', h_send: 'Enviar', h_sent: '¡Gracias! Ya lo tiene el tutor.', h_sentWait: '¡Gracias! Le llegará al tutor en cuanto abra Monstruitos.', h_missing: 'Responde las cuatro, por favor.',
       newsTitle: 'Novedades desde tu última visita', newsOk: 'Entendido', n_stars: 'Ha ganado {n} ⭐', n_neg: '{n} «a mejorar»', n_up: '¡Ha evolucionado a {phase}!', n_down: 'Ha vuelto a la fase {phase}', n_bought: 'Ha comprado {item}', n_boughtHome: 'Compra hecha desde casa: {item}', n_redeemed: 'Ha disfrutado su privilegio: {item}', n_coins: 'El tutor ha cambiado sus monedas: {d}', n_orderOk: 'Tu compra «{item}» ya está anotada en clase', n_orderNo: 'Al final no se pudo comprar «{item}» ({why}): sus monedas siguen ahí',
       why_nocoins: 'no tenía monedas suficientes', why_phase: 'aún no ha llegado a la fase necesaria', why_owned: 'ya lo tenía', why_soldout: 'se agotó por hoy', why_weekly: 'ya lo usó esta semana', why_season: 'ya no es temporada', why_gone: 'ya no está en la tienda', why_error: 'hubo un problema'
     },
@@ -40,7 +41,7 @@
       shop: 'Botiga de la classe', shopNote: 'Ho compra a classe, el «Dia de botiga», amb les seues monedes. Gastar mai li lleva estreles.', filterCan: 'Pot comprar', filterAll: 'Tot', cos: 'Per al seu monstre', priv: 'Privilegis',
       seeAll: 'Veure’ls tots ({n})', st_ok: 'Li arriba!', st_coins: 'Falten {n} 🪙', st_phase: 'Des de {phase}', st_owned: 'Ja el té', st_soldout: 'Esgotat hui', st_weekly: 'Ja l’ha usat aquesta setmana', mystery: 'Caixa sorpresa', mysteryNote: 'un adorn a l’atzar',
       saving: 'Està estalviant per a', vouchers: 'Els seus vals', vPending: 'Per bescanviar', vRedeemed: 'Gaudit', noVouchers: 'Encara no ha comprat cap privilegi.', goals: 'Premis de la classe', goalMine: 'ha aportat {n} 🪙', goalDone: 'Aconseguit!',
-      how: 'Com funciona?',
+      how: 'Com funciona?', noticeTitle: 'Missatge del tutor', n_notice: 'Hi ha un missatge nou del tutor',
       howText: ['Cada bon comportament a classe li dona estreles ⭐.', 'Amb les estreles el seu monstre evoluciona: Cria, Jove, Adult, Heroic, Llegendari i Mític.', 'Cada estrela és també una moneda 🪙 per a la botiga de la classe. Gastar monedes mai li lleva estreles ni fases.'],
       howBonus: 'Si un dia no té cap «a millorar», a les {time} rep {n} ⭐ extra.', howDraw: 'La forma Mítica és el seu propi dibuix, convertit en monstre.',
       updated: 'Actualitzat el {date}', privacy: 'Aquestes dades van xifrades: només es poden obrir amb aquest codi. No el compartisques fora de la família.',
@@ -49,7 +50,8 @@
       phases: { huevo: 'Ou', cria: 'Cria', joven: 'Jove', adulto: 'Adult', heroico: 'Heroic', legendario: 'Llegendari', mitico: 'Mític' },
       whyNoHome: 'Això ho compra a classe, el «Dia de botiga». La compra des de casa no està activada.', whyNo: 'Ara no es pot comprar.',
       buy: 'Comprar', buyQ: 'Comprar «{item}» per {n} 🪙?', buyNote: 'Es descompta ara mateix de les seues monedes i ja és seu. Ho veurà a classe.', bought: 'Comprat!', boughtCos: 'El seu monstre ja el porta posat.', boughtPriv: 'El podrà bescanviar a classe.', mine: 'Ja és seu', homeNote: '🏠 Comprat des de casa: s’anotarà a classe tan prompte com s’òbriga Monstrets.', spentHome: '{n} gastades des de casa', buyYes: 'Sí, comprar', cancel: 'Cancel·lar', sending: 'Enviant…', sent: 'Comanda enviada!', sendErr: 'No s’ha pogut enviar. Revisa la connexió i torna-ho a provar.', pendingTitle: 'Comandes en camí', pendingChip: 'En camí', reserved: '{n} reservades en comandes', shopNoteHome: 'Pots comprar des d’ací amb les seues monedes: la comanda arriba a classe i ho veurà allí. Gastar mai li lleva estreles.', available: 'disponibles',
-      history: 'Historial', histMore: 'Veure’n més', histNone: 'Encara no hi ha moviments.', h_bonus: 'Dia sense incidències', h_adjust: 'Ajust del tutor', h_coins: 'Ajust de monedes del tutor', h_buy: 'Compra', h_home: 'des de casa', h_mystery: 'Caixa sorpresa: {item}', today: 'Hui', yesterday: 'Ahir',
+      history: 'Historial', histMore: 'Veure’n més', histNone: 'Encara no hi ha moviments.', h_bonus: 'Dia sense incidències', h_adjust: 'Ajust del tutor', h_coins: 'Ajust de monedes del tutor', h_buy: 'Compra', h_home: 'des de casa', h_mystery: 'Caixa sorpresa: {item}', today: 'Hui', yesterday: 'Ahir', histStars: 'Historial d’estreles', histStarsSub: 'Què ha fet a classe i quantes estreles suma o resta cada cosa.', histCoins: 'Monedes: compres i ajustos', h_noted: 'anotat', h_notedHint: 'Els «a millorar» marcats com a «anotat» no resten estreles.', h_day: '{n} ⭐ aquest dia', coinsNone: 'Encara no ha gastat monedes.',
+      w_title: 'Monstròpolis', w_planet: 'Planeta {n} de {t}', w_now: 'Ara està aprenent', w_help: 'Com ajudar a casa', w_done: 'Planetes conquistats: {n}', w_stages: ['Acaba d’arribar', 'Enlairant-se', 'En òrbita', 'Aterrant', 'Conquistat!'], w_what: 'Cada planeta és un hàbit. Quan el fa a soles, sense que li ho recorden, el conquista i viatja al següent.', w_summit: 'Ha arribat al cim de Monstròpolis!', n_planet: 'Ha conquistat el planeta {p}! Ara viatja al planeta {q}', h_title: 'Aquesta setmana a casa', h_text: 'Un toc per setmana ens ajuda molt. Com ha anat?', h_si: 'Sí', h_aveces: 'A vegades', h_no: 'Encara no', h_send: 'Enviar', h_sent: 'Gràcies! Ja ho té el tutor.', h_sentWait: 'Gràcies! Li arribarà al tutor tan prompte com òbriga Monstrets.', h_missing: 'Respon les quatre, per favor.',
       newsTitle: 'Novetats des de la teua última visita', newsOk: 'D’acord', n_stars: 'Ha guanyat {n} ⭐', n_neg: '{n} «a millorar»', n_up: 'Ha evolucionat a {phase}!', n_down: 'Ha tornat a la fase {phase}', n_bought: 'Ha comprat {item}', n_boughtHome: 'Compra feta des de casa: {item}', n_redeemed: 'Ha gaudit del seu privilegi: {item}', n_coins: 'El tutor ha canviat les seues monedes: {d}', n_orderOk: 'La teua compra «{item}» ja està anotada a classe', n_orderNo: 'Al final no s’ha pogut comprar «{item}» ({why}): les seues monedes continuen ahí',
       why_nocoins: 'no tenia monedes suficients', why_phase: 'encara no ha arribat a la fase necessària', why_owned: 'ja el tenia', why_soldout: 's’ha esgotat per hui', why_weekly: 'ja l’ha usat aquesta setmana', why_season: 'ja no és temporada', why_gone: 'ja no està a la botiga', why_error: 'hi ha hagut un problema'
     }
@@ -60,6 +62,8 @@
   const t = (k, p) => { let s = (L[lang] || L.es)[k]; if (s === undefined) s = L.es[k]; if (typeof s === 'string' && p) Object.keys(p).forEach(x => { s = s.split('{' + x + '}').join(p[x]); }); return s; };
   const esc = (s) => String(s === undefined || s === null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
   const nm = (o) => (o && (o[lang] || o.es)) || '';
+  // Apartados que el tutor ha decidido mostrar (las fichas antiguas no lo dicen: se ve todo)
+  const on = (k) => !data || !data.show || data.show[k] !== false;
   const fmtDate = (iso) => { const d = new Date(iso); const m = t('months')[d.getMonth()]; const de = lang === 'va' && /^[aeiou]/.test(m) ? "d'" : 'de '; return t('days')[d.getDay()] + ' ' + d.getDate() + ' ' + de + m + ', ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0'); };
 
   // ---------- Guardados en el móvil ----------
@@ -174,14 +178,17 @@
   function news() {
     const d = data, seen = LS.get(seenKey(), null);
     const P = d.phases || ['huevo', 'cria', 'joven', 'adulto', 'heroico', 'legendario', 'mitico'];
-    const mark = () => LS.set(seenKey(), { at: d.updated, phase: d.phase });
+    const mark = () => LS.set(seenKey(), { at: d.updated, phase: d.phase, planet: d.world ? d.world.cur : 0 });
     if (!seen || !seen.at) return mark(); // primera visita: no hay «novedades»
     if (seen.at >= d.updated) return;
+    if (!on('news')) return mark();
     const after = (x) => x && x > seen.at;
     const rows = [];
     const hist = (d.history || []).filter(h => after(h.at));
     const plus = hist.filter(h => h.v > 0 && h.k !== 'adjust').reduce((a, h) => a + h.v, 0), negs = hist.filter(h => h.k === 'neg').length;
     if (seen.phase && seen.phase !== d.phase) rows.push(P.indexOf(d.phase) > P.indexOf(seen.phase) ? ['🎉', t('n_up', { phase: t('phases')[d.phase] }), 'up'] : ['↘️', t('n_down', { phase: t('phases')[d.phase] }), 'down']);
+    if (d.world && window.Planets && seen.planet && d.world.cur > seen.planet) for (let n = seen.planet; n < d.world.cur; n++) rows.push(['🪐', t('n_planet', { p: Planets.tx(Planets.get(n).name, lang), q: Planets.tx(Planets.get(n + 1).name, lang) }), 'up']);
+    if (d.notice && after(d.notice.at)) rows.unshift(['📌', t('n_notice'), 'up']);
     if (plus) rows.push(['⭐', t('n_stars', { n: plus }), 'up']);
     if (negs) rows.push(['📝', t('n_neg', { n: negs }), 'neg']);
     (d.notices || []).filter(n => after(n.at)).forEach(n => rows.push(n.ok ? [n.icon || '🛍️', t('n_orderOk', { item: nm(n) }), 'up'] : ['⚠️', t('n_orderNo', { item: nm(n), why: t('why_' + (n.reason || 'error')) }), 'neg']));
@@ -255,14 +262,77 @@
     const m = t('months')[d.getMonth()]; const de = lang === 'va' && /^[aeiou]/.test(m) ? "d'" : 'de ';
     return t('days')[d.getDay()] + ' ' + d.getDate() + ' ' + de + m;
   }
+  // ---------- Monstrópolis ----------
+  function worldHtml(m) {
+    const w = data.world; if (!w || !window.Planets) return '';
+    const p = Planets.get(w.cur), sys = Planets.SYSTEMS[p.sys], summit = w.done.some(x => x.n === Planets.COUNT);
+    const dots = Planets.PLANETS.map(q => `<i class="${q.n < w.cur || summit ? 'done' : q.n === w.cur ? 'now' : ''}"></i>`).join('');
+    return `<section class="box world"><h2>🪐 ${esc(t('w_title'))}</h2>
+      <div class="wcard"><div class="wpl">${Planets.planetSvg(w.cur, 150)}<div class="wmon">${Monsters.render(m, { phase: data.phase === 'huevo' ? 'cria' : data.phase, size: 92, shadow: false })}</div></div>
+        <div class="wtx"><small style="background:${sys.color}">${esc(Planets.tx(sys.sun, lang))} · ${esc(Planets.tx(sys, lang))}</small>
+          <b class="wn">${esc(t('w_planet', { n: w.cur, t: Planets.COUNT }))} · ${esc(p.emoji)} ${esc(Planets.tx(p.name, lang))}</b>
+          <span class="wlab">${esc(t('w_now'))}:</span><b class="wh">${esc(Planets.tx(p.habit, lang))}</b>
+          <span class="wst">${esc(summit ? t('w_summit') : (t('w_stages')[w.stage] || ''))}</span></div></div>
+      <div class="wpath">${dots}</div><p class="soft">${esc(t('w_done', { n: w.done.length }))}</p>
+      <div class="whelp"><b>🏠 ${esc(t('w_help'))}</b><p>${esc(Planets.tx(p.home, lang))}</p></div>
+      <p class="soft small">${esc(t('w_what'))}</p></section>`;
+  }
+  const HKEY = () => 'mn-home-' + fid;
+  function homeHtml() {
+    if (!data.shopUrl || !data.home || !window.Planets) return '';
+    const sent = LS.get(HKEY(), null);
+    const done = data.home.done || (sent && sent.w === data.home.week);
+    if (done) return `<section class="box home done"><h2>🏠 ${esc(t('h_title'))}</h2><p class="soft">${esc(data.home.done ? t('h_sent') : t('h_sentWait'))}</p></section>`;
+    return `<section class="box home"><h2>🏠 ${esc(t('h_title'))}</h2><p class="soft">${esc(t('h_text'))}</p>
+      ${Planets.HOME.map(hh => `<div class="hq" data-h="${hh.id}"><span class="hqt">${esc(hh.emoji)} ${esc(Planets.tx(hh, lang))}</span><span class="hqb">${['si', 'aveces', 'no'].map(v => `<button data-v="${v}">${esc(t('h_' + v))}</button>`).join('')}</span></div>`).join('')}
+      <button class="btn" id="homeSend">${esc(t('h_send'))}</button><p class="hmsg"></p></section>`;
+  }
+  function bindHome(key) {
+    const box = $app.querySelector('.box.home:not(.done)'); if (!box) return;
+    const ans = {};
+    box.querySelectorAll('.hq').forEach(q => q.querySelectorAll('[data-v]').forEach(b => b.onclick = () => { ans[q.dataset.h] = b.dataset.v; q.querySelectorAll('[data-v]').forEach(x => x.classList.toggle('on', x === b)); }));
+    const btn = box.querySelector('#homeSend'), msg = box.querySelector('.hmsg');
+    btn.onclick = async () => {
+      if (Object.keys(ans).length < Planets.HOME.length) { msg.textContent = t('h_missing'); return; }
+      btn.disabled = true; msg.textContent = t('sending');
+      try {
+        const c = await encryptMsg(key, { n: rid(), h: ans, w: data.home.week, at: new Date().toISOString() });
+        const r = await fetch(String(data.shopUrl).replace(/\/+$/, '') + '/p', { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify({ f: fid, c }) });
+        if (!r.ok) throw new Error('http ' + r.status);
+        LS.set(HKEY(), { w: data.home.week, at: new Date().toISOString() });
+        box.classList.add('done');
+        box.innerHTML = `<h2>🏠 ${esc(t('h_title'))}</h2><p class="soft">🎉 ${esc(t('h_sentWait'))}</p>${confetti()}`;
+      } catch (e) { btn.disabled = false; msg.textContent = t('sendErr'); }
+    };
+  }
+
+  // Estrellas: concepto y cuánto suma o resta, agrupado por días con el total de cada día
+  let starsAll = false;
+  function starsHtml() {
+    const ev = (data.history || []).map(h => {
+      const counts = h.c !== false;
+      const v = h.v > 0 ? '+' + h.v + ' ⭐' : h.v < 0 ? (counts ? '−' + Math.abs(h.v) + ' ⭐' : t('h_noted')) : '0';
+      return { at: h.at, icon: h.k === 'bonus' ? '🌟' : h.k === 'adjust' ? '⚡' : h.icon, text: h.k === 'bonus' ? t('h_bonus') : h.k === 'adjust' ? t('h_adjust') : nm(h), v, n: counts ? h.v : 0, cls: h.v < 0 ? (counts ? 'neg' : 'note') : 'pos' };
+    }).sort((a, b) => b.at.localeCompare(a.at));
+    if (!ev.length) return `<p class="soft">${esc(t('histNone'))}</p>`;
+    const shown = starsAll ? ev : ev.slice(0, 30);
+    const sums = {}; ev.forEach(e => { const d = dayLabel(e.at); sums[d] = (sums[d] || 0) + e.n; });
+    let out = '', last = '', anyNote = false;
+    shown.forEach(e => {
+      const dl = dayLabel(e.at);
+      if (dl !== last) { const n = sums[dl]; out += `<li class="hday"><span>${esc(dl)}</span><span class="dsum ${n < 0 ? 'neg' : ''}">${esc(t('h_day', { n: (n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n) }))}</span></li>`; last = dl; }
+      if (e.cls === 'note') anyNote = true;
+      out += `<li class="${e.cls}"><span class="emo">${esc(e.icon || '⭐')}</span><span class="ht">${esc(e.text)}</span><b>${esc(e.v)}</b></li>`;
+    });
+    return `<ul class="hist stars">${out}</ul>${anyNote ? `<p class="soft small">${esc(t('h_notedHint'))}</p>` : ''}${!starsAll && ev.length > shown.length ? `<button class="more" id="starsMore">${esc(t('histMore'))}</button>` : ''}`;
+  }
   function historyHtml() {
-    const ev = (data.history || []).map(h => ({ at: h.at, icon: h.k === 'bonus' ? '🌟' : h.k === 'adjust' ? '⚡' : h.icon, text: h.k === 'bonus' ? t('h_bonus') : h.k === 'adjust' ? t('h_adjust') : nm(h), v: (h.v > 0 ? '+' : h.v < 0 ? '−' : '') + Math.abs(h.v) + ' ⭐', cls: h.v < 0 ? 'neg' : 'pos' }))
-      .concat((data.buys || []).map(b => b.k === 'coins'
+    const ev = [].concat((data.buys || []).map(b => b.k === 'coins'
         ? { at: b.at, icon: '🪙', text: t('h_coins') + (b.note ? ' · ' + b.note : ''), v: (b.d > 0 ? '+' : '−') + Math.abs(b.d) + ' 🪙', cls: b.d > 0 ? 'pos' : 'neg' }
         : { at: b.at, icon: b.icon || '🛍️', text: (b.mystery ? t('h_mystery', { item: nm(b) }) : t('h_buy') + ': ' + nm(b)) + (b.from === 'casa' ? ' (' + t('h_home') + ')' : ''), v: '−' + b.cost + ' 🪙', cls: 'buy' }))
       .concat((data.shopUrl ? pendingOrders() : []).map(p => ({ at: p.at, icon: p.icon || (p.kind === 'cosmetic' ? '✨' : '🎟️'), text: t('h_buy') + ': ' + nm(p) + ' (' + t('h_home') + ')', v: '−' + p.price + ' 🪙', cls: 'buy' })))
       .sort((a, b) => b.at.localeCompare(a.at));
-    if (!ev.length) return `<p class="soft">${esc(t('histNone'))}</p>`;
+    if (!ev.length) return `<p class="soft">${esc(t('coinsNone'))}</p>`;
     const shown = histAll ? ev : ev.slice(0, 25);
     let out = '', last = '';
     shown.forEach(e => {
@@ -319,19 +389,22 @@
     $app.innerHTML = header() + `<main class="kid${firstPaint ? ' enter' : ''}">
       <section class="hero"><div class="mini-card big${cardCls}"><div class="mwrap">${Monsters.render(m, { phase: d.phase, size: 250 })}</div>${name ? `<div class="name">${name}</div>` : ''}</div>
         <h1>${name ? esc(t('monsterOf', { name: d.name })) : esc(t('yourMonster'))}</h1><span class="phase-chip">${esc(t('phases')[d.phase] || '')}</span></section>
-      <section class="stats"><div class="stat"><b>⭐ ${Number(d.stars) || 0}</b><span>${esc(t('stars'))}</span></div><div class="stat coin"><b>🪙 <span class="cnt" data-to="${avail}">${avail}</span></b><span>${esc(t('coins'))}${reserved ? `<br><small>🏠 ${esc(t('spentHome', { n: reserved }))}</small>` : ''}</span></div></section>
-      <section class="box next">${d.next ? `<div class="bar"><i style="width:${Math.round((d.next.progress || 0) * 100)}%"></i></div><p>${esc(t('toNext', { n: d.next.missing, phase: t('phases')[d.next.phase] || '' }))}</p>` : `<p class="max">🏆 ${esc(t('maxPhase'))}</p>`}</section>
-      <section class="box"><h2>${esc(t('path'))}</h2><div class="track-scroll"><div class="track">${P.map((p, i) => `<div class="tr-step ${i < ci ? 'done' : ''} ${i === ci ? 'now' : ''} ${i > ci ? 'todo' : ''}">${Monsters.render(m, { phase: p, size: 64, shadow: false })}<small>${esc(t('phases')[p])}</small></div>`).join('')}</div></div></section>
-      <section class="box week"><h2>${esc(t('week'))}</h2>${d.week && (d.week.stars || d.week.bonusDays) ? `<p><b>${esc(t('weekStars', { n: d.week.stars || 0 }))}</b>${d.week.bonusDays ? ` · 🌟 ${esc(t('bonusDays', { n: d.week.bonusDays }))}` : ''}</p>` : `<p class="soft">${esc(t('weekNone'))}</p>`}</section>
+      ${d.notice ? `<section class="box notice"><h2>📌 ${esc(t('noticeTitle'))}</h2><p>${esc(nm(d.notice))}</p></section>` : ''}
+      ${on('stats') ? `<section class="stats"><div class="stat"><b>⭐ ${Number(d.stars) || 0}</b><span>${esc(t('stars'))}</span></div><div class="stat coin"><b>🪙 <span class="cnt" data-to="${avail}">${avail}</span></b><span>${esc(t('coins'))}${reserved ? `<br><small>🏠 ${esc(t('spentHome', { n: reserved }))}</small>` : ''}</span></div></section>` : ''}
+      ${on('next') ? `<section class="box next">${d.next ? `<div class="bar"><i style="width:${Math.round((d.next.progress || 0) * 100)}%"></i></div><p>${esc(t('toNext', { n: d.next.missing, phase: t('phases')[d.next.phase] || '' }))}</p>` : `<p class="max">🏆 ${esc(t('maxPhase'))}</p>`}</section>` : ''}
+      ${on('path') ? `<section class="box"><h2>${esc(t('path'))}</h2><div class="track-scroll"><div class="track">${P.map((p, i) => `<div class="tr-step ${i < ci ? 'done' : ''} ${i === ci ? 'now' : ''} ${i > ci ? 'todo' : ''}">${Monsters.render(m, { phase: p, size: 64, shadow: false })}<small>${esc(t('phases')[p])}</small></div>`).join('')}</div></div></section>` : ''}
+      ${on('week') && d.week ? `<section class="box week"><h2>${esc(t('week'))}</h2>${d.week && (d.week.stars || d.week.bonusDays) ? `<p><b>${esc(t('weekStars', { n: d.week.stars || 0 }))}</b>${d.week.bonusDays ? ` · 🌟 ${esc(t('bonusDays', { n: d.week.bonusDays }))}` : ''}</p>` : `<p class="soft">${esc(t('weekNone'))}</p>`}</section>` : ''}
+      ${on('world') ? worldHtml(m) : ''}${on('home') ? homeHtml() : ''}
+      ${on('starsHist') ? `<section class="box starsbox"><h2>⭐ ${esc(t('histStars'))}</h2><p class="soft">${esc(t('histStarsSub'))}</p>${starsHtml()}</section>` : ''}
       ${d.goal ? `<section class="box goal"><h2>🐷 ${esc(t('saving'))}</h2><p><b>${esc(nm(d.goal))}</b> · 🪙 ${Math.min(d.coins, d.goal.price)}/${d.goal.price}</p><div class="bar"><i style="width:${Math.min(100, Math.round(100 * (d.coins || 0) / Math.max(1, d.goal.price)))}%"></i></div></section>` : ''}
-      <section class="box shop"><h2>🛍️ ${esc(t('shop'))}</h2><p class="soft">${esc(d.shopUrl ? t('shopNoteHome') : t('shopNote'))}</p>${pendList.length ? `<p class="homenote">${esc(t('homeNote'))}</p>` : ''}
+      ${on('shop') ? `<section class="box shop"><h2>🛍️ ${esc(t('shop'))}</h2><p class="soft">${esc(d.shopUrl ? t('shopNoteHome') : t('shopNote'))}</p>${pendList.length ? `<p class="homenote">${esc(t('homeNote'))}</p>` : ''}
         <div class="filters"><button data-f="can" class="${filter === 'can' ? 'on' : ''}">${esc(t('filterCan'))}</button><button data-f="all" class="${filter === 'all' ? 'on' : ''}">${esc(t('filterAll'))}</button></div>
         ${cos.length ? `<h3>${esc(t('cos'))}</h3>${shopGrid(cos, 'cos')}` : ''}${priv.length ? `<h3>${esc(t('priv'))}</h3>${shopGrid(priv, 'priv')}` : ''}
-        ${d.mystery ? `<div class="mystery">🎁 <b>${esc(t('mystery'))}</b> <span class="soft">(${esc(t('mysteryNote'))})</span> · 🪙 ${d.mystery} ${(d.coins || 0) >= d.mystery ? `<span class="chip ok">${esc(t('st_ok'))}</span>` : ''}</div>` : ''}</section>
-      <section class="box"><h2>🎟️ ${esc(t('vouchers'))}</h2>${pend.length + done.length ? `<ul class="vlist">${pend.concat(done).map(v => `<li><span class="emo">${esc(v.icon || '🎟️')}</span><span class="vn">${esc(nm(v))}${v.home ? ' 🏠' : ''}</span><span class="chip ${v.status === 'pending' ? 'pend' : 'own'}">${esc(v.status === 'pending' ? t('vPending') : t('vRedeemed'))}</span></li>`).join('')}</ul>` : `<p class="soft">${esc(t('noVouchers'))}</p>`}</section>
-      <section class="box"><h2>📜 ${esc(t('history'))}</h2>${historyHtml()}</section>
-      ${(d.goals || []).length ? `<section class="box"><h2>👥 ${esc(t('goals'))}</h2>${d.goals.map(g => `<div class="goalrow"><div><span class="emo">${esc(g.icon || '🎉')}</span> <b>${esc(nm(g))}</b> ${g.status === 'done' || g.total >= g.target ? `<span class="chip ok">${esc(t('goalDone'))}</span>` : ''}</div><div class="bar"><i style="width:${Math.min(100, Math.round(100 * g.total / Math.max(1, g.target)))}%"></i></div><small>🪙 ${g.total}/${g.target}${g.mine ? ' · ' + esc(t('goalMine', { n: g.mine })) : ''}</small></div>`).join('')}</section>` : ''}
-      <section class="box how"><details><summary>${esc(t('how'))}</summary><ul>${t('howText').concat(howExtra).map(x => `<li>${esc(x)}</li>`).join('')}</ul></details></section>
+        ${d.mystery ? `<div class="mystery">🎁 <b>${esc(t('mystery'))}</b> <span class="soft">(${esc(t('mysteryNote'))})</span> · 🪙 ${d.mystery} ${(d.coins || 0) >= d.mystery ? `<span class="chip ok">${esc(t('st_ok'))}</span>` : ''}</div>` : ''}</section>` : ''}
+      ${on('vouchers') ? `<section class="box"><h2>🎟️ ${esc(t('vouchers'))}</h2>${pend.length + done.length ? `<ul class="vlist">${pend.concat(done).map(v => `<li><span class="emo">${esc(v.icon || '🎟️')}</span><span class="vn">${esc(nm(v))}${v.home ? ' 🏠' : ''}</span><span class="chip ${v.status === 'pending' ? 'pend' : 'own'}">${esc(v.status === 'pending' ? t('vPending') : t('vRedeemed'))}</span></li>`).join('')}</ul>` : `<p class="soft">${esc(t('noVouchers'))}</p>`}</section>` : ''}
+      ${on('coinsHist') ? `<section class="box"><h2>🪙 ${esc(t('histCoins'))}</h2>${historyHtml()}</section>` : ''}
+      ${on('goals') && (d.goals || []).length ? `<section class="box"><h2>👥 ${esc(t('goals'))}</h2>${d.goals.map(g => `<div class="goalrow"><div><span class="emo">${esc(g.icon || '🎉')}</span> <b>${esc(nm(g))}</b> ${g.status === 'done' || g.total >= g.target ? `<span class="chip ok">${esc(t('goalDone'))}</span>` : ''}</div><div class="bar"><i style="width:${Math.min(100, Math.round(100 * g.total / Math.max(1, g.target)))}%"></i></div><small>🪙 ${g.total}/${g.target}${g.mine ? ' · ' + esc(t('goalMine', { n: g.mine })) : ''}</small></div>`).join('')}</section>` : ''}
+      ${on('how') ? `<section class="box how"><details><summary>${esc(t('how'))}</summary><ul>${t('howText').concat(howExtra).map(x => `<li>${esc(x)}</li>`).join('')}</ul></details></section>` : ''}
       <footer class="foot"><p>${esc(t('updated', { date: fmtDate(d.updated) }))}</p><p class="soft">🔒 ${esc(t('privacy'))}</p>
         <button class="btn ${saved ? 'ghost' : ''}" id="save">${esc(saved ? t('forget') : t('remember'))}</button>${saved ? `<p class="soft">✓ ${esc(t('remembered'))}</p>` : ''}<p class="soft small">${esc(t('homeHint'))}</p></footer>
     </main>`;
@@ -353,6 +426,8 @@
     // Las monedas bajan contando cuando se compra algo
     const cnt = $app.querySelector('.stat.coin .cnt');
     if (cnt) { const to = Number(cnt.dataset.to) || 0; if (shownCoins !== null && shownCoins !== to && !reduceMotion()) countTo(cnt, shownCoins, to); shownCoins = to; }
+    bindHome(key);
+    const sm = document.getElementById('starsMore'); if (sm) sm.onclick = () => { starsAll = true; const y = window.scrollY; render(key); window.scrollTo(0, y); };
     const hm = document.getElementById('histMore'); if (hm) hm.onclick = () => { histAll = true; const y = window.scrollY; render(key); window.scrollTo(0, y); };
     const sc = $app.querySelector('.track-scroll'), now = sc && sc.querySelector('.tr-step.now');
     if (sc && now) sc.scrollLeft = Math.max(0, now.offsetLeft - sc.clientWidth / 2 + now.offsetWidth / 2);

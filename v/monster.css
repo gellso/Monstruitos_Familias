@@ -206,3 +206,7 @@ body.anim-lite .give-heads .monster *:not(.m-anim) { animation: none !important;
 @keyframes toastIn { from { opacity: 0; transform: translateY(-14px) scale(.92); } }
 @keyframes toastLeave { to { opacity: 0; transform: translateY(-10px) scale(.96); } }
 @keyframes numBump { 50% { transform: scale(1.15); } }
+@keyframes attPulse { 50% { transform: scale(1.35); } }
+@keyframes worldPulse { 50% { transform: scale(1.12); } }
+@keyframes gkidFloat { 50% { transform: translate(-50%, calc(-50% - 6px)); } }
+@keyframes gkidFloat2 { 50% { transform: translate(-50%, -8px); } }

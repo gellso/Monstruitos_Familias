@@ -149,3 +149,37 @@ details summary { transition: color .2s; } details[open] ul { animation: vUp .3s
 .item.can { border-color: #bfeed8; }
 .buyq .price { color: #b97f00; font-weight: 900; margin: 0; }
 .buyq .why { background: #fff7e6; border-radius: 12px; padding: 10px 12px; margin: 10px 0 14px; color: var(--ink); }
+
+/* 1.9: historial de estrellas con total por día */
+.hist li.hday { display: flex; justify-content: space-between; align-items: baseline; }
+.hist .dsum { font-weight: 900; color: #1f9e6a; font-size: 13px; }
+.hist .dsum.neg { color: #d0453a; }
+.hist li.note b { color: var(--ink2); font-weight: 800; font-size: 13px; background: #f6efe3; padding: 2px 8px; border-radius: 99px; }
+.hist.stars li b { white-space: nowrap; }
+
+/* 2.0: Monstrópolis */
+.box.world { background: linear-gradient(160deg, #2b2366, #4a3a9a); color: #fff; }
+.box.world h2 { color: #fff; }
+.box.world .soft { color: rgba(255,255,255,.75); }
+.wcard { display: flex; align-items: center; gap: 12px; }
+.wpl { position: relative; width: 150px; height: 170px; flex: none; }
+.wpl > svg { position: absolute; left: 0; top: 20px; }
+.wmon { position: absolute; left: 50%; top: -14px; transform: translateX(-50%); animation: wfloat 3s ease-in-out infinite; }
+@keyframes wfloat { 50% { transform: translate(-50%, -7px); } }
+.wtx { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.wtx small { align-self: flex-start; color: #fff; font-weight: 900; font-size: 12px; padding: 2px 10px; border-radius: 99px; }
+.wtx .wn { font-size: 18px; } .wtx .wlab { font-size: 13px; opacity: .8; } .wtx .wh { font-size: 17px; color: #ffd23f; }
+.wtx .wst { align-self: flex-start; background: rgba(255,255,255,.15); border-radius: 99px; padding: 2px 10px; font-weight: 800; font-size: 13px; }
+.wpath { display: flex; flex-wrap: wrap; gap: 4px; margin: 12px 0 4px; }
+.wpath i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.25); }
+.wpath i.done { background: #2fcf95; } .wpath i.now { background: #ffd23f; box-shadow: 0 0 0 3px rgba(255,210,63,.35); }
+.whelp { background: rgba(255,255,255,.12); border-radius: 16px; padding: 10px 12px; margin-top: 8px; }
+.whelp p { margin: 4px 0 0; }
+.box.home .hq { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 8px 0; border-bottom: 2px solid #f6efe3; }
+.box.home .hqt { flex: 1; min-width: 180px; font-weight: 800; }
+.box.home .hqb button { border-radius: 99px; padding: 6px 12px; background: #f6efe3; font-weight: 800; margin-left: 4px; }
+.box.home .hqb button.on { background: #7b5cff; color: #fff; }
+.box.home #homeSend { margin-top: 12px; } .box.home .hmsg { color: #c2603f; font-weight: 800; }
+/* Mensaje del tutor */
+.box.notice { background: #fff8e1; border: 2px solid #ffd666; }
+.box.notice p { margin: 0; white-space: pre-line; font-size: 16px; line-height: 1.45; }
