@@ -18,7 +18,7 @@
       shop: 'Tienda de la clase', shopNote: 'Lo compra en clase, el «Día de tienda», con sus monedas. Gastar nunca le quita estrellas.', filterCan: 'Puede comprar', filterAll: 'Todo', cos: 'Para su monstruo', priv: 'Privilegios',
       seeAll: 'Ver todos ({n})', st_ok: '¡Le llega!', st_coins: 'Faltan {n} 🪙', st_phase: 'Desde {phase}', st_owned: 'Ya lo tiene', st_soldout: 'Agotado hoy', st_weekly: 'Ya lo usó esta semana', mystery: 'Caja sorpresa', mysteryNote: 'un adorno al azar',
       saving: 'Está ahorrando para', vouchers: 'Sus vales', vPending: 'Por canjear', vRedeemed: 'Disfrutado', noVouchers: 'Todavía no ha comprado ningún privilegio.', goals: 'Premios de la clase', goalMine: 'ha aportado {n} 🪙', goalDone: '¡Conseguido!',
-      how: '¿Cómo funciona?', noticeTitle: 'Mensaje del tutor', n_notice: 'Hay un mensaje nuevo del tutor',
+      how: '¿Cómo funciona?',
       howText: ['Cada buen comportamiento en clase le da estrellas ⭐.', 'Con las estrellas su monstruo evoluciona: Cría, Joven, Adulto, Heroico, Legendario y Mítico.', 'Cada estrella es también una moneda 🪙 para la tienda de la clase. Gastar monedas nunca le quita estrellas ni fases.'],
       howBonus: 'Si un día no tiene ningún «a mejorar», a las {time} recibe {n} ⭐ extra.', howDraw: 'La forma Mítica es su propio dibujo, convertido en monstruo.',
       updated: 'Actualizado el {date}', privacy: 'Estos datos van cifrados: solo se pueden abrir con este código. No lo compartas fuera de la familia.',
@@ -41,7 +41,7 @@
       shop: 'Botiga de la classe', shopNote: 'Ho compra a classe, el «Dia de botiga», amb les seues monedes. Gastar mai li lleva estreles.', filterCan: 'Pot comprar', filterAll: 'Tot', cos: 'Per al seu monstre', priv: 'Privilegis',
       seeAll: 'Veure’ls tots ({n})', st_ok: 'Li arriba!', st_coins: 'Falten {n} 🪙', st_phase: 'Des de {phase}', st_owned: 'Ja el té', st_soldout: 'Esgotat hui', st_weekly: 'Ja l’ha usat aquesta setmana', mystery: 'Caixa sorpresa', mysteryNote: 'un adorn a l’atzar',
       saving: 'Està estalviant per a', vouchers: 'Els seus vals', vPending: 'Per bescanviar', vRedeemed: 'Gaudit', noVouchers: 'Encara no ha comprat cap privilegi.', goals: 'Premis de la classe', goalMine: 'ha aportat {n} 🪙', goalDone: 'Aconseguit!',
-      how: 'Com funciona?', noticeTitle: 'Missatge del tutor', n_notice: 'Hi ha un missatge nou del tutor',
+      how: 'Com funciona?',
       howText: ['Cada bon comportament a classe li dona estreles ⭐.', 'Amb les estreles el seu monstre evoluciona: Cria, Jove, Adult, Heroic, Llegendari i Mític.', 'Cada estrela és també una moneda 🪙 per a la botiga de la classe. Gastar monedes mai li lleva estreles ni fases.'],
       howBonus: 'Si un dia no té cap «a millorar», a les {time} rep {n} ⭐ extra.', howDraw: 'La forma Mítica és el seu propi dibuix, convertit en monstre.',
       updated: 'Actualitzat el {date}', privacy: 'Aquestes dades van xifrades: només es poden obrir amb aquest codi. No el compartisques fora de la família.',
@@ -62,8 +62,6 @@
   const t = (k, p) => { let s = (L[lang] || L.es)[k]; if (s === undefined) s = L.es[k]; if (typeof s === 'string' && p) Object.keys(p).forEach(x => { s = s.split('{' + x + '}').join(p[x]); }); return s; };
   const esc = (s) => String(s === undefined || s === null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
   const nm = (o) => (o && (o[lang] || o.es)) || '';
-  // Apartados que el tutor ha decidido mostrar (las fichas antiguas no lo dicen: se ve todo)
-  const on = (k) => !data || !data.show || data.show[k] !== false;
   const fmtDate = (iso) => { const d = new Date(iso); const m = t('months')[d.getMonth()]; const de = lang === 'va' && /^[aeiou]/.test(m) ? "d'" : 'de '; return t('days')[d.getDay()] + ' ' + d.getDate() + ' ' + de + m + ', ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0'); };
 
   // ---------- Guardados en el móvil ----------
@@ -181,14 +179,12 @@
     const mark = () => LS.set(seenKey(), { at: d.updated, phase: d.phase, planet: d.world ? d.world.cur : 0 });
     if (!seen || !seen.at) return mark(); // primera visita: no hay «novedades»
     if (seen.at >= d.updated) return;
-    if (!on('news')) return mark();
     const after = (x) => x && x > seen.at;
     const rows = [];
     const hist = (d.history || []).filter(h => after(h.at));
     const plus = hist.filter(h => h.v > 0 && h.k !== 'adjust').reduce((a, h) => a + h.v, 0), negs = hist.filter(h => h.k === 'neg').length;
     if (seen.phase && seen.phase !== d.phase) rows.push(P.indexOf(d.phase) > P.indexOf(seen.phase) ? ['🎉', t('n_up', { phase: t('phases')[d.phase] }), 'up'] : ['↘️', t('n_down', { phase: t('phases')[d.phase] }), 'down']);
     if (d.world && window.Planets && seen.planet && d.world.cur > seen.planet) for (let n = seen.planet; n < d.world.cur; n++) rows.push(['🪐', t('n_planet', { p: Planets.tx(Planets.get(n).name, lang), q: Planets.tx(Planets.get(n + 1).name, lang) }), 'up']);
-    if (d.notice && after(d.notice.at)) rows.unshift(['📌', t('n_notice'), 'up']);
     if (plus) rows.push(['⭐', t('n_stars', { n: plus }), 'up']);
     if (negs) rows.push(['📝', t('n_neg', { n: negs }), 'neg']);
     (d.notices || []).filter(n => after(n.at)).forEach(n => rows.push(n.ok ? [n.icon || '🛍️', t('n_orderOk', { item: nm(n) }), 'up'] : ['⚠️', t('n_orderNo', { item: nm(n), why: t('why_' + (n.reason || 'error')) }), 'neg']));
@@ -389,22 +385,21 @@
     $app.innerHTML = header() + `<main class="kid${firstPaint ? ' enter' : ''}">
       <section class="hero"><div class="mini-card big${cardCls}"><div class="mwrap">${Monsters.render(m, { phase: d.phase, size: 250 })}</div>${name ? `<div class="name">${name}</div>` : ''}</div>
         <h1>${name ? esc(t('monsterOf', { name: d.name })) : esc(t('yourMonster'))}</h1><span class="phase-chip">${esc(t('phases')[d.phase] || '')}</span></section>
-      ${d.notice ? `<section class="box notice"><h2>📌 ${esc(t('noticeTitle'))}</h2><p>${esc(nm(d.notice))}</p></section>` : ''}
-      ${on('stats') ? `<section class="stats"><div class="stat"><b>⭐ ${Number(d.stars) || 0}</b><span>${esc(t('stars'))}</span></div><div class="stat coin"><b>🪙 <span class="cnt" data-to="${avail}">${avail}</span></b><span>${esc(t('coins'))}${reserved ? `<br><small>🏠 ${esc(t('spentHome', { n: reserved }))}</small>` : ''}</span></div></section>` : ''}
-      ${on('next') ? `<section class="box next">${d.next ? `<div class="bar"><i style="width:${Math.round((d.next.progress || 0) * 100)}%"></i></div><p>${esc(t('toNext', { n: d.next.missing, phase: t('phases')[d.next.phase] || '' }))}</p>` : `<p class="max">🏆 ${esc(t('maxPhase'))}</p>`}</section>` : ''}
-      ${on('path') ? `<section class="box"><h2>${esc(t('path'))}</h2><div class="track-scroll"><div class="track">${P.map((p, i) => `<div class="tr-step ${i < ci ? 'done' : ''} ${i === ci ? 'now' : ''} ${i > ci ? 'todo' : ''}">${Monsters.render(m, { phase: p, size: 64, shadow: false })}<small>${esc(t('phases')[p])}</small></div>`).join('')}</div></div></section>` : ''}
-      ${on('week') && d.week ? `<section class="box week"><h2>${esc(t('week'))}</h2>${d.week && (d.week.stars || d.week.bonusDays) ? `<p><b>${esc(t('weekStars', { n: d.week.stars || 0 }))}</b>${d.week.bonusDays ? ` · 🌟 ${esc(t('bonusDays', { n: d.week.bonusDays }))}` : ''}</p>` : `<p class="soft">${esc(t('weekNone'))}</p>`}</section>` : ''}
-      ${on('world') ? worldHtml(m) : ''}${on('home') ? homeHtml() : ''}
-      ${on('starsHist') ? `<section class="box starsbox"><h2>⭐ ${esc(t('histStars'))}</h2><p class="soft">${esc(t('histStarsSub'))}</p>${starsHtml()}</section>` : ''}
+      <section class="stats"><div class="stat"><b>⭐ ${Number(d.stars) || 0}</b><span>${esc(t('stars'))}</span></div><div class="stat coin"><b>🪙 <span class="cnt" data-to="${avail}">${avail}</span></b><span>${esc(t('coins'))}${reserved ? `<br><small>🏠 ${esc(t('spentHome', { n: reserved }))}</small>` : ''}</span></div></section>
+      <section class="box next">${d.next ? `<div class="bar"><i style="width:${Math.round((d.next.progress || 0) * 100)}%"></i></div><p>${esc(t('toNext', { n: d.next.missing, phase: t('phases')[d.next.phase] || '' }))}</p>` : `<p class="max">🏆 ${esc(t('maxPhase'))}</p>`}</section>
+      <section class="box"><h2>${esc(t('path'))}</h2><div class="track-scroll"><div class="track">${P.map((p, i) => `<div class="tr-step ${i < ci ? 'done' : ''} ${i === ci ? 'now' : ''} ${i > ci ? 'todo' : ''}">${Monsters.render(m, { phase: p, size: 64, shadow: false })}<small>${esc(t('phases')[p])}</small></div>`).join('')}</div></div></section>
+      <section class="box week"><h2>${esc(t('week'))}</h2>${d.week && (d.week.stars || d.week.bonusDays) ? `<p><b>${esc(t('weekStars', { n: d.week.stars || 0 }))}</b>${d.week.bonusDays ? ` · 🌟 ${esc(t('bonusDays', { n: d.week.bonusDays }))}` : ''}</p>` : `<p class="soft">${esc(t('weekNone'))}</p>`}</section>
+      ${worldHtml(m)}${homeHtml()}
+      <section class="box starsbox"><h2>⭐ ${esc(t('histStars'))}</h2><p class="soft">${esc(t('histStarsSub'))}</p>${starsHtml()}</section>
       ${d.goal ? `<section class="box goal"><h2>🐷 ${esc(t('saving'))}</h2><p><b>${esc(nm(d.goal))}</b> · 🪙 ${Math.min(d.coins, d.goal.price)}/${d.goal.price}</p><div class="bar"><i style="width:${Math.min(100, Math.round(100 * (d.coins || 0) / Math.max(1, d.goal.price)))}%"></i></div></section>` : ''}
-      ${on('shop') ? `<section class="box shop"><h2>🛍️ ${esc(t('shop'))}</h2><p class="soft">${esc(d.shopUrl ? t('shopNoteHome') : t('shopNote'))}</p>${pendList.length ? `<p class="homenote">${esc(t('homeNote'))}</p>` : ''}
+      <section class="box shop"><h2>🛍️ ${esc(t('shop'))}</h2><p class="soft">${esc(d.shopUrl ? t('shopNoteHome') : t('shopNote'))}</p>${pendList.length ? `<p class="homenote">${esc(t('homeNote'))}</p>` : ''}
         <div class="filters"><button data-f="can" class="${filter === 'can' ? 'on' : ''}">${esc(t('filterCan'))}</button><button data-f="all" class="${filter === 'all' ? 'on' : ''}">${esc(t('filterAll'))}</button></div>
         ${cos.length ? `<h3>${esc(t('cos'))}</h3>${shopGrid(cos, 'cos')}` : ''}${priv.length ? `<h3>${esc(t('priv'))}</h3>${shopGrid(priv, 'priv')}` : ''}
-        ${d.mystery ? `<div class="mystery">🎁 <b>${esc(t('mystery'))}</b> <span class="soft">(${esc(t('mysteryNote'))})</span> · 🪙 ${d.mystery} ${(d.coins || 0) >= d.mystery ? `<span class="chip ok">${esc(t('st_ok'))}</span>` : ''}</div>` : ''}</section>` : ''}
-      ${on('vouchers') ? `<section class="box"><h2>🎟️ ${esc(t('vouchers'))}</h2>${pend.length + done.length ? `<ul class="vlist">${pend.concat(done).map(v => `<li><span class="emo">${esc(v.icon || '🎟️')}</span><span class="vn">${esc(nm(v))}${v.home ? ' 🏠' : ''}</span><span class="chip ${v.status === 'pending' ? 'pend' : 'own'}">${esc(v.status === 'pending' ? t('vPending') : t('vRedeemed'))}</span></li>`).join('')}</ul>` : `<p class="soft">${esc(t('noVouchers'))}</p>`}</section>` : ''}
-      ${on('coinsHist') ? `<section class="box"><h2>🪙 ${esc(t('histCoins'))}</h2>${historyHtml()}</section>` : ''}
-      ${on('goals') && (d.goals || []).length ? `<section class="box"><h2>👥 ${esc(t('goals'))}</h2>${d.goals.map(g => `<div class="goalrow"><div><span class="emo">${esc(g.icon || '🎉')}</span> <b>${esc(nm(g))}</b> ${g.status === 'done' || g.total >= g.target ? `<span class="chip ok">${esc(t('goalDone'))}</span>` : ''}</div><div class="bar"><i style="width:${Math.min(100, Math.round(100 * g.total / Math.max(1, g.target)))}%"></i></div><small>🪙 ${g.total}/${g.target}${g.mine ? ' · ' + esc(t('goalMine', { n: g.mine })) : ''}</small></div>`).join('')}</section>` : ''}
-      ${on('how') ? `<section class="box how"><details><summary>${esc(t('how'))}</summary><ul>${t('howText').concat(howExtra).map(x => `<li>${esc(x)}</li>`).join('')}</ul></details></section>` : ''}
+        ${d.mystery ? `<div class="mystery">🎁 <b>${esc(t('mystery'))}</b> <span class="soft">(${esc(t('mysteryNote'))})</span> · 🪙 ${d.mystery} ${(d.coins || 0) >= d.mystery ? `<span class="chip ok">${esc(t('st_ok'))}</span>` : ''}</div>` : ''}</section>
+      <section class="box"><h2>🎟️ ${esc(t('vouchers'))}</h2>${pend.length + done.length ? `<ul class="vlist">${pend.concat(done).map(v => `<li><span class="emo">${esc(v.icon || '🎟️')}</span><span class="vn">${esc(nm(v))}${v.home ? ' 🏠' : ''}</span><span class="chip ${v.status === 'pending' ? 'pend' : 'own'}">${esc(v.status === 'pending' ? t('vPending') : t('vRedeemed'))}</span></li>`).join('')}</ul>` : `<p class="soft">${esc(t('noVouchers'))}</p>`}</section>
+      <section class="box"><h2>🪙 ${esc(t('histCoins'))}</h2>${historyHtml()}</section>
+      ${(d.goals || []).length ? `<section class="box"><h2>👥 ${esc(t('goals'))}</h2>${d.goals.map(g => `<div class="goalrow"><div><span class="emo">${esc(g.icon || '🎉')}</span> <b>${esc(nm(g))}</b> ${g.status === 'done' || g.total >= g.target ? `<span class="chip ok">${esc(t('goalDone'))}</span>` : ''}</div><div class="bar"><i style="width:${Math.min(100, Math.round(100 * g.total / Math.max(1, g.target)))}%"></i></div><small>🪙 ${g.total}/${g.target}${g.mine ? ' · ' + esc(t('goalMine', { n: g.mine })) : ''}</small></div>`).join('')}</section>` : ''}
+      <section class="box how"><details><summary>${esc(t('how'))}</summary><ul>${t('howText').concat(howExtra).map(x => `<li>${esc(x)}</li>`).join('')}</ul></details></section>
       <footer class="foot"><p>${esc(t('updated', { date: fmtDate(d.updated) }))}</p><p class="soft">🔒 ${esc(t('privacy'))}</p>
         <button class="btn ${saved ? 'ghost' : ''}" id="save">${esc(saved ? t('forget') : t('remember'))}</button>${saved ? `<p class="soft">✓ ${esc(t('remembered'))}</p>` : ''}<p class="soft small">${esc(t('homeHint'))}</p></footer>
     </main>`;

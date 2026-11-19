@@ -180,6 +180,3 @@ details summary { transition: color .2s; } details[open] ul { animation: vUp .3s
 .box.home .hqb button { border-radius: 99px; padding: 6px 12px; background: #f6efe3; font-weight: 800; margin-left: 4px; }
 .box.home .hqb button.on { background: #7b5cff; color: #fff; }
 .box.home #homeSend { margin-top: 12px; } .box.home .hmsg { color: #c2603f; font-weight: 800; }
-/* Mensaje del tutor */
-.box.notice { background: #fff8e1; border: 2px solid #ffd666; }
-.box.notice p { margin: 0; white-space: pre-line; font-size: 16px; line-height: 1.45; }
