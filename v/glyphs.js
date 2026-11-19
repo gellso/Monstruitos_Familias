@@ -1,4 +1,4 @@
-/* Monstruitos — iconos propios para la estrella y la moneda.
+/* Monstruitos — iconos propios para la estrella y la energía (antes, moneda).
    macOS 10.13 solo trae emojis hasta la versión 5.0: la moneda 🪙 (Emoji 13) no existe allí
    y la estrella depende de la fuente del sistema. Aquí se dibujan en SVG para que se vean
    igual en cualquier ordenador. Un observador cambia automáticamente cada ⭐ y 🪙 que
@@ -6,7 +6,7 @@
 (function () {
   'use strict';
   const STAR = '<svg class="ic ic-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.9l2.95 6.2 6.75.85-5 4.68 1.3 6.73L12 17.06l-6 3.3 1.3-6.73-5-4.68 6.75-.85z" fill="#ffc83d" stroke="#e08e00" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.6 9.1l1.7-3.4" stroke="#fff4c2" stroke-width="1.7" stroke-linecap="round"/></svg>';
-  const COIN = '<svg class="ic ic-coin" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="13.2" rx="9.6" ry="9.2" fill="#d99a06"/><circle cx="12" cy="11.6" r="9.6" fill="#ffcf3a" stroke="#c98a00" stroke-width="1.5"/><circle cx="12" cy="11.6" r="6.4" fill="none" stroke="#e8a90f" stroke-width="1.4"/><path d="M12 7.4l1.25 2.6 2.85.36-2.1 1.97.55 2.84L12 13.8l-2.55 1.37.55-2.84-2.1-1.97 2.85-.36z" fill="#f2b417"/><path d="M6.6 7.2a6.9 6.9 0 0 1 3.6-2.5" stroke="#fff3b8" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>';
+  const COIN = '<svg class="ic ic-coin ic-energy" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12.9" r="9.9" fill="#2f5fd0"/><circle cx="12" cy="11.6" r="9.9" fill="#4f8dff" stroke="#2f5fd0" stroke-width="1.4"/><path d="M13.4 3.9L6.9 13.1h4.6l-1.6 7.1 7-9.8h-4.7z" fill="#ffe14d" stroke="#d99a00" stroke-width="1.2" stroke-linejoin="round"/><path d="M6.4 7.3a7 7 0 0 1 3.4-2.6" stroke="#cfe0ff" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>'; // 2.2: energía (antes moneda)
   const LINE = (d) => '<svg class="ic ic-line" viewBox="0 0 24 24" aria-hidden="true"><path d="' + d + '" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   const MAP = {
     '\u2B50': STAR, '\uD83E\uDE99': COIN,

@@ -42,7 +42,7 @@ button { font-family: var(--font); font-weight: 900; color: var(--ink); border: 
 .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0 12px; }
 .stat { background: #fff; border-radius: var(--radius); padding: 12px; text-align: center; box-shadow: 0 3px 0 rgba(45, 36, 64, .06); }
 .stat b { display: block; font-size: 32px; font-weight: 900; color: #c7891a; }
-.stat.coin b { color: #b97f00; }
+.stat.coin b { color: #2f5fd0; }
 .stat span { color: var(--ink2); font-size: 14px; }
 
 .box { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin: 12px 0; box-shadow: 0 3px 0 rgba(45, 36, 64, .06); }
@@ -69,7 +69,7 @@ button { font-family: var(--font); font-weight: 900; color: var(--ink); border: 
 .item .art .emo { font-size: 54px; }
 .item .art .mini-card { width: 84px; height: 94px; }
 .item .iname { font-size: 14px; line-height: 1.2; }
-.item .price { color: #b97f00; font-weight: 900; }
+.item .price { color: #2f5fd0; font-weight: 900; }
 .item.st-phase .art, .item.st-soldout .art, .item.st-weekly .art { filter: grayscale(.8); opacity: .6; }
 .chip { display: inline-block; font-size: 12px; font-weight: 900; padding: 3px 9px; border-radius: 99px; background: #f3ead9; color: var(--ink2); }
 .chip.ok { background: #d8f8ea; color: #138a5e; }
@@ -147,7 +147,7 @@ details summary { transition: color .2s; } details[open] ul { animation: vUp .3s
 
 .item { cursor: pointer; }
 .item.can { border-color: #bfeed8; }
-.buyq .price { color: #b97f00; font-weight: 900; margin: 0; }
+.buyq .price { color: #2f5fd0; font-weight: 900; margin: 0; }
 .buyq .why { background: #fff7e6; border-radius: 12px; padding: 10px 12px; margin: 10px 0 14px; color: var(--ink); }
 
 /* 1.9: historial de estrellas con total por día */
@@ -180,3 +180,7 @@ details summary { transition: color .2s; } details[open] ul { animation: vUp .3s
 .box.home .hqb button { border-radius: 99px; padding: 6px 12px; background: #f6efe3; font-weight: 800; margin-left: 4px; }
 .box.home .hqb button.on { background: #7b5cff; color: #fff; }
 .box.home #homeSend { margin-top: 12px; } .box.home .hmsg { color: #c2603f; font-weight: 800; }
+/* Mensaje del tutor */
+.box.notice { background: #fff8e1; border: 2px solid #ffd666; }
+.box.notice p { margin: 0; white-space: pre-line; font-size: 16px; line-height: 1.45; }
+.hist .hnote { display: block; font-size: 13.5px; font-weight: 700; color: var(--ink2, #6b6380); margin-top: 2px; line-height: 1.3; }
